@@ -2,10 +2,16 @@ package com.majo.ocp.assignment2;
 
 public class Employee {
     int id;
+    String name;
 
     public Employee(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public static void printEmployee(Integer integer, Employee employee) {
+
+        System.out.println(employee.toString());
     }
 
     public int getId() {
@@ -24,8 +30,6 @@ public class Employee {
         this.name = name;
     }
 
-    String name;
-
     @Override
     public String toString() {
         return "Employee{" +
@@ -37,10 +41,5 @@ public class Employee {
     public void printEmployee() {
 
         System.out.println(toString());
-    }
-
-    public static void printEmployee(Integer integer, Employee employee) {
-
-        System.out.println(employee.toString());
     }
 }
