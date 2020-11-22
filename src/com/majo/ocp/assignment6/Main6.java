@@ -8,10 +8,10 @@ public class Main6 {
     public static void main(String[] args) {
 
         //1
-        System.out.println(getStudentList().stream().map(e -> e.getName()).collect(Collectors.joining("- ", ">>", "<<")));
+        System.out.println(getStudentList().stream().map(Student::getName).collect(Collectors.joining("- ", ">>", "<<")));
 
         //2
-        System.out.println(getStudentList().stream().map(e -> e.getName()).collect(Collectors.averagingDouble(String::length)));
+        System.out.println(getStudentList().stream().map(Student::getName).collect(Collectors.averagingDouble(String::length)));
 
         List<String> names = Arrays.asList("AbD", "Ahmad", "Ali", "KHALED");
         //3
