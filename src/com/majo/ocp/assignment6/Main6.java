@@ -25,7 +25,7 @@ public class Main6 {
         System.out.println(map5);
 
         //6
-        Map<Boolean, List<String>> map6 = names.stream().collect(Collectors.partitioningBy(e -> e.startsWith("A"), Collectors.toList()));
+        Map<Boolean, List<String>> map6 = names.stream().collect(Collectors.partitioningBy(e -> e.toUpperCase().startsWith("A"), Collectors.toList()));
         System.out.println(map6);
 
         //7
